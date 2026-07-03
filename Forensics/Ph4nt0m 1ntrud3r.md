@@ -13,6 +13,7 @@ To solve this challenge, you'll need to analyze the provided PCAP file and track
 ```
 - then in the info i found how some were ```TCP Out of Order```
  <img width="953" height="337" alt="Screenshot from 2026-06-20 14-11-33" src="https://github.com/user-attachments/assets/5bf39f14-cd0c-4d9b-8fee-89b093d17f70" />
+ 
 - so i filtered based on just this and extracted the base 64 strings from those packets
 ```
 cGljb0NURg==
