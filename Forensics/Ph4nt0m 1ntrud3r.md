@@ -5,7 +5,6 @@ To solve this challenge, you'll need to analyze the provided PCAP file and track
 
 ### SOLUTION 
 - i opened the pcap file in wireshark and saw that there were 22 packets and the protocol column only had TCP
-- each packet had some base 64 string but when i tried decoding them individually nothing of useful was shown
 - in hints it was given
 ```
 1. Filter your packets.
@@ -13,4 +12,22 @@ To solve this challenge, you'll need to analyze the provided PCAP file and track
 3. Time is essential.
 ```
 - then in the info i found how some were ```TCP Out of Order```
+ <img width="953" height="337" alt="Screenshot from 2026-06-20 14-11-33" src="https://github.com/user-attachments/assets/5bf39f14-cd0c-4d9b-8fee-89b093d17f70" />
+- so i filtered based on just this and extracted the base 64 strings from those packets
+```
+cGljb0NURg==
+ezF0X3c0cw==
+bnRfdGg0dA==
+XzM0c3lfdA==
+YmhfNHJfOQ==
+NjZkMGJmYg==
+fQ==
+```
+- which when decoded gives us legible english fragements of the flag in scrambled order which when we arrange based on time gave me the flag
+
+### FLAG 
+picoCTF{1t_w4snt_th4t_34sy_tbh_4r_966d0bfb}
+
+### RESOURCE 
+https://gchq.github.io/CyberChef/
  
